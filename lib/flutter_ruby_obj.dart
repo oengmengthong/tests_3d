@@ -13,8 +13,10 @@ class _FlutterCudeRubyObjState extends State<FlutterCudeRubyObj>  with SingleTic
   void _onSceneCreated(Scene scene) {
     scene.camera.position.z = 10;
     scene.camera.target.y = 2;
-    // scene.world.add(Object(scale: Vector3(10.0, 10.0, 10.0), fileName: 'assets/ruby_rose.obj'));
-    scene.world.add(Object(scale: Vector3(10.0, 10.0, 10.0), fileName: 'assets/lowpolytree.obj'));
+    scene.camera.zoom = 2;
+    scene.light.position.setFrom(Vector3(0, 10, 10));
+    scene.blendMode = BlendMode.srcOver;
+    scene.world.add(Object(scale: Vector3(10.0, 10.0, 10.0), fileName: 'assets/ruby_rose.obj'));
   }
 
   @override

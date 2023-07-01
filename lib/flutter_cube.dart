@@ -18,7 +18,9 @@ class _FlutterCudePackageState extends State<FlutterCudePackage>with SingleTicke
   void _onSceneCreated(Scene scene) {
     _scene = scene;
     scene.camera.position.z = 50;
-    _cube = Object(scale: Vector3(2.0, 2.0, 2.0), backfaceCulling: false, fileName: 'assets/cube.obj');
+    // _cube = Object(scale: Vector3(2.0, 2.0, 2.0), backfaceCulling: false, fileName: 'assets/Cargo_Container.fbx');
+    _cube = Object(scale: Vector3(2.0, 2.0, 2.0), backfaceCulling: false, fileName: 'assets/Cargo_Container.obj');
+    // _cube = Object(scale: Vector3(2.0, 2.0, 2.0), backfaceCulling: false, fileName: 'assets/cube.obj');
     final int samples = 100;
     final double radius = 8;
     final double offset = 2 / samples;
@@ -31,7 +33,9 @@ class _FlutterCudePackageState extends State<FlutterCudePackage>with SingleTicke
       final z = sin(phi) * r;
       final Object cube = Object(
         position: Vector3(x, y, z)..scale(radius),
-        fileName: 'assets/cube.obj',
+        // fileName: 'assets/Cargo_Container.fbx',
+        fileName: 'assets/Cargo_Container.obj',
+        // fileName: 'assets/cube.obj',
       );
       _cube!.add(cube);
     }

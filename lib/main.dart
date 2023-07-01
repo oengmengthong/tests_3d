@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:tests_3d/ditredi.dart';
 import 'package:tests_3d/flutter_cube.dart';
 import 'package:tests_3d/flutter_ruby_obj.dart';
+import 'package:tests_3d/model_viewer_plus_test.dart';
 import 'package:tests_3d/obj_file.dart';
 
 void main() {
@@ -14,19 +15,17 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: '3D Views',
       theme: ThemeData.dark(
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const MyHomePage(),
     );
   }
 }
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-
-  final String title;
+  const MyHomePage({super.key});
 
   @override
   State<MyHomePage> createState() => _MyHomePageState();
@@ -39,7 +38,7 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: Text("3D Views"),
+        title: const Text("3D Views"),
       ),
       body: ListView(children: [
         ListTile(
@@ -61,6 +60,11 @@ class _MyHomePageState extends State<MyHomePage> {
           title: Text("Ditredi Package"),
           onTap: () => Navigator.push(context,
               MaterialPageRoute(builder: (context) => DitrediPackageTest())),
+        ),
+        ListTile(
+          title: Text("Model Viewer Plus"),
+          onTap: () => Navigator.push(context,
+              MaterialPageRoute(builder: (context) => ModelViewerPlusTest())),
         )
       ]),
     );

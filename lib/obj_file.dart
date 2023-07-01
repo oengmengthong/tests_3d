@@ -15,10 +15,10 @@ class _ObjExtensinFileState extends State<ObjExtensinFile> {
       appBar: AppBar(
         title: const Text('Obj File'),
       ),
-      body:  Center(
+      body:  const Center(
         child: Object3D(
           size: Size(400.0, 400.0),
-          color: Colors.black,
+          color: Colors.white,
           object: "assets/Cargo_Container.obj",
         ),
       ),

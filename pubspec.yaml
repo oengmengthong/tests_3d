@@ -39,6 +39,8 @@ dependencies:
   flutter_cube: ^0.1.1
   ditredi: ^1.0.4
   vector_math: ^2.1.4
+  model_viewer_plus: ^1.5.0
+  flutter_unity_widget: ^2020.3.25
 
 dev_dependencies:
   flutter_test:
